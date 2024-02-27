@@ -1,0 +1,341 @@
+Ethereal Journey by Sleepy Jay
+Prologue:
+
+“Wa… up…”
+…
+“Wake… p”
+…
+“Wake up, child.”
+A familiar voice gently calls for the sleeping child, waking them from their long slumber.
+Dialogue options:
+“Who are you?”
+“Where am I?”
+“I am the conductor of the train you will board soon. Right now, you are about to start your path, your ending.”
+…?
+“The path you walk on will change depending on your choices. You’ll come to understand in due time. Look for items and unlock the train ticket to your next station.”
+“Now, wake up, child…”
+
+First area:
+*Player wakes up in the first cabin of the train and looks around before conductor shows up*
+???: “Welcome to Ethereal Express!”
+Conductor: “I am your conductor, your friend, your guide, and the one who will be on your side!”
+Conductor: “The doors to the next carriage will open, provided that you have a ticket and have made a choice.”
+*Player looks for a ticket but doesn’t have one on hand.. Question mark displayed on top of their head*
+Conductor: “Oh dear me, how could I have forgotten to provide you with your ticket- Have no fear. I must have some on me…”
+*Conductor checks pockets but found nothing*
+Conductor: …
+…
+“It appears I may have misplaced all my tickets around each train carriage…”
+“I hope you don’t mind helping this old friend of yours in finding the ticket around this carriage?”
+Player: …
+Conductor: “... I’ll take your silence as a yes.”
+“Splendid! Now, feel free to search the carriage. Hopefully you’ll stumble across the ticket at some point.”
+
+Interaction messages/Item descriptions:
+Old key: An old key.. Its purpose is unknown.
+Small sugar chest box: A small chest box made from sugar. Perhaps a key could open this?
+Small sugar key: A small key made from sugar. This should unlock something!
+When the sugar key is used for the sugar chest: You used the sugar key to open the sugar chest and hear a click sound. You open the box to find the ticket. A ticket was obtained!
+
+Extra dialogue option after obtaining ticket: Please present the ticket to the conductor.
+
+Once the ticket is presented to the conductor:
+*Exclamation point on top of conductor’s head*
+Conductor: “You’ve found the missing ticket! Well done.”
+“I’m sure it wasn’t easy trying to look for the ticket, but here we are- just you, me, and the ticket.”
+“Now…”
+“It is time for you to make your first choice.”
+“There once lived a child who traveled among the stars, going on adventures and spending countless nights gazing at the stars around them.”
+“In comparison, another child rarely traveled anywhere, staying in the same room and spending their nights gazing at the same sets of lights.”
+“Answer me this child.”
+“Which child are you?”
+Dialogue options:
+“A child that travels among the stars.”
+“A child who remains in the same room.”
+
+If dialogue 1:
+Conductor: “Wonderful!”
+“The next carriage shall be ready for you soon.”
+“Here’s a friendly note from your friendly conductor! The stars that were once connected are now in chaos.”
+“I hope that your journey down this path is phenomenal!”
+
+If dialogue 2: 
+Conductor: “Extravagant!”
+“The next carriage shall be ready for you soon.”
+“Here’s a friendly note from your friendly conductor! A game can be determined through the best hand.”
+“I hope that you don’t get poked by the thorns in this path.”
+
+Path 1:
+Interaction messages/Item descriptions:
+Note 1 (star 3): 
+Note 2 (star 5): 
+Note 3 (star 4): 
+Note 4 (star 1): 
+Note 5 (star 2): 
+DEVELOPER NOTE: The note hints will either be drawn or written though a png file
+If the player interacts with the hidden compartment: Looks like it can be opened but not through normal means.
+Once the stars are aligned: The stars have aligned! A constellation of a [insert here] has been completed.
+The sound of something opening can be heard.
+When the player obtains the ticket: A train ticket was obtained!
+
+Extra dialogue option after obtaining ticket: Please present the ticket to the conductor.
+
+Once the ticket is presented to the conductor:
+Conductor: “Brilliant job!”
+“I wouldn’t have guessed in a billion light years that you would be able to find the ticket by rearranging the stars.”
+“To be able to understand that brilliant mind of yours!”
+“Moving on.”
+“Here are your next fantastical options for your next adventure.”
+“The child who traveled the stars got hungry one day on their travels.”
+“Wishing to eat some food, they were presented with two options.”
+“The first option was to eat from the trash while the second option was to eat from a house made of food.”
+“Which path would you like to set on?”
+Dialogue options:
+“I want to eat trash!”
+“I want to eat from the food house!”
+
+If dialogue 1:
+Conductor: “Interesting choice.”
+“Not many would choose this option but who am I to stop you?”
+“Enjoy your meal child!”
+*Player goes through the door but it goes into a short dialogue cut scene*
+Upon consuming trash, the child began feeling sick to their stomach.
+Despite their cries of pain, the conductor could not change the choice that the child made.
+Thus, this was the child’s end.
+
+If dialogue 2:
+Conductor: “Eggcellent choice!”
+“Even such foods are tempting for me.”
+“The next carriage shall be ready for you soon.”
+“Here’s a warning if you don’t want to become scrambled eggs in this next carriage.”
+“It is quite the puzzling carriage, do beware of the entity that surveys the area.”
+“It’s like a game of hide and seek! I hope you’ll find the next train ticket safely.”
+
+Hide and Seek 1 (Puzzle will end up making the image of a gingerbread house in a fantasy world):
+Interaction messages/Item descriptions:
+If the player finds a puzzle piece: A puzzle piece was found! Maybe it will fit somewhere…
+If the player interacts with the cabinet that the conductor is hiding in: You try to open this cabinet but it appears that the door is locked from the inside…
+If the player is caught by the monster: png jumpscare, then with the message of “The End.”
+If the player interacts with the broken puzzle window: Looks like some pieces are missing! That’s quite puzzling!
+
+For the hiding function:
+Players can NOT use the same hiding spots
+Must find 6 puzzle pieces and put them together before they run out of places to hide
+If the player hides in the cabinet: 
+Pop-up dialogue: Do you wish to hide in the cabinet?
+Options:
+No.
+Yes.
+If the player hides under the table:
+Pop-up dialogue: Do you wish to hide under the table?
+Options:
+No.
+Yes.
+If the player hides in the closet:
+Pop-up dialogue: Do you wish to hide in the closet?
+Options:
+No.
+Yes.
+
+Once the player completes hide and seek map:
+*Monster will dissipate and a train ticket will descend from the sky*
+Dialogue: You hear the sound of something being unlocked.
+*Conductor comes out from the locked cabinet*
+Conductor: “Well done on defeating the entity child!”
+“Who would’ve thought that these entities called Nightmares would show up on the train?”
+“As usual, a puzzle was completed and a train ticket was obtained.”
+“Here’s the last choice you can make now that you’ve gotten this far.”
+“Beyond this carriage, lies the last carriage.”
+“This question is simple.”
+“Do you wish to continue to the next carriage or remain in this one?”
+Dialogue options:
+“I want to continue.”
+“I want to stay here.”
+
+If dialogue 1:
+Conductor: “Then, let’s see where this ending takes you.”
+“Unfortunately, this is the last we’ll see each other as my job as your guide and conductor ends here.”
+“It was a pleasure guiding you through this journey!”
+“I hope that you can continue the adventures that you dream of.”
+“Farewell, my friend.”
+*Child steps into the last carriage and triggers Ending 1*
+
+If dialogue 2:
+Conductor: “Oh, I see.”
+“Well, although it is unfortunate that you do not wish to continue this journey, it was a pleasure guiding you!”
+“I hope this carriage will be able to offer you what you want.”
+“Farewell.”
+*Cut-scene where conductor leaves and child begins turning into the monster that guards this carriage*
+Dialogue pop-up: The End.
+
+Ending 1:
+Cut-scene dialogue:
+The child opens the door to the last train carriage of their journey.
+
+Similar to the story that the conductor told the child before,
+They were met with the sight of stars.
+
+There are a million possibilities awaiting the child.
+Many worlds waiting to be explored.
+
+The child puts on a cape and helmet from this world,
+Then turns to obtain a sword and shield in hand.
+
+Smiling, the child begins their new journey in the stars.
+
+“An adventure awaits!”
+
+Path 2:
+Interaction messages/Item descriptions:
+Ace of spades: An ace of spades. Good thing it wasn’t a club.
+King of diamonds: The king of diamonds. Surely, he must be under a lot of pressure.
+Queen of clubs: The queen of clubs. The card.
+Jack of hearts: The jack of hearts. At least he’s not heartless.
+10 of diamonds: The 10 of diamonds. These must be the missing diamonds of the king…
+Card arrangement: (1) Ace of spades, (2) Jack of hearts, (3) Queen of clubs, (4) King of diamonds, (5) 10 of diamonds.
+Player interacting with sleeping NPC: A sleeping player. 
+If the player interacts with sleeping NPC 3 times: Stop bothering someone sleeping. [Player can no longer interact with sleeping NPC after this]
+If the player interacts with Sleepy Card Player after getting the ticket: “Get go’in kid. I’m go’na to sit here and drown in my embarrass’in loss.” [Cannot interact with this NPC after this dialogue]
+
+One table of cards is arranged:
+*Sleepy Card Player wakes up with an exclamation point on top of their head*
+Sleepy Card Player: “To think that my straight flush would be beaten by a child…”
+“Sad. Quite embarrass’in really.”
+“Well kid, since you beat me at Poker, here’s a lil’ something for ya travels.”
+*Sleepy Card Player hands over a train ticket to the player*
+
+Extra dialogue option after obtaining ticket: A train ticket was obtained!
+Please present the ticket to the conductor.
+
+When player presents ticket to conductor:
+Conductor: “What a surprise!”
+“I’m delighted to hear that you were able to win a game against the Sleepy Card Player!”
+“They enjoy collecting stuff around this cabin to hand out as rewards if anyone wins a game against them.”
+“The train ticket must have been one of them!”
+“Since you’ve presented me with this ticket, you will have to make another decision.”
+“After playing a game of cards, the child began to feel hungry.”
+“This child was then presented with two options”
+“The first option was to eat the leftovers from a trash can. The second option was to eat from the dining table.”
+“What path would you like to set on?”
+
+If dialogue 1:
+Conductor: “Interesting choice.”
+“Not many would choose this option but who am I to stop you?”
+“Enjoy your meal child!”
+*Player goes through the door but it goes into a short dialogue cut scene*
+Upon consuming trash, the child began feeling sick to their stomach.
+Despite their cries of pain, the conductor could not change the choice that the child made.
+Thus, this was the child’s end.
+
+If dialogue 2:
+Conductor: “Eggcellent choice!”
+“Eating at the dining table is the way to go!”
+“The next carriage shall be ready for you soon.”
+“Here’s a warning if you don’t want to become scrambled eggs.”
+“It is quite the puzzling carriage, do beware of the entity that surveys the area.”
+“It’s like a game of hide and seek! I hope you’ll find the next train ticket safely.”
+
+Hide and Seek 2 (Puzzle will end up showing a broken dining table at a middle of nowhere- what’s left of Earth that is):
+Interaction messages/Item descriptions:
+If the player finds a puzzle piece: A puzzle piece was found! Maybe it will fit somewhere…
+If the player interacts with the cabinet that the conductor is hiding in: You try to open this cabinet but it appears that the door is locked from the inside…
+If the player is caught by the monster: png jumpscare, then with the message of “The End.”
+If the player interacts with the broken puzzle window: Looks like some pieces are missing! That’s quite puzzling!
+
+For the hiding function:
+Players can NOT use the same hiding spots
+Must find 6 puzzle pieces and put them together before they run out of places to hide
+If the player hides in the cabinet: 
+Pop-up dialogue: Do you wish to hide in the cabinet?
+Options:
+No.
+Yes.
+If the player hides under the table:
+Pop-up dialogue: Do you wish to hide under the table?
+Options:
+No.
+Yes.
+If the player hides in the closet:
+Pop-up dialogue: Do you wish to hide in the closet?
+Options:
+No.
+Yes.
+
+If the player finds the hidden room:
+Dialogue if they interact with the door:
+There seems to be a door that does not match the interior of the train.
+This door requires an Old Key to enter.
+If the player does not have the Old Key: You currently do not have the item required for the door.
+If the player has the Old Key: Do you wish to use the Old Key to enter? By entering, you can no longer go back to your current carriage.
+Dialogue option:
+No, I don’t want to enter.
+Yes, I wish to enter.
+If 1 dialogue: You decide not to enter.
+If 2 dialogue: You decide to put the Old Key in the key hole and enter the room. 
+*This will trigger the Hidden Room Ending*
+
+Once the player completes hide and seek map:
+*Monster dissipates and drops the ticket that it had*
+Dialogue: You hear the sound of something being unlocked.
+*The conductor comes out from the cabinet*
+Conductor: “Well done on defeating the entity child!”
+“Who would’ve thought that these entities called Nightmares would show up on the train?”
+“As usual, a puzzle was completed and a train ticket was obtained.”
+“Here’s the last choice you can make now that you’ve gotten this far.”
+“Beyond this carriage, lies the last carriage.”
+“This question is simple.”
+“Do you wish to continue to the next carriage or remain in this one?” 
+Dialogue options:
+“I want to continue.”
+“I want to stay here.”
+
+If dialogue 1:
+Conductor: “Of course, a journey to the truth wouldn’t be complete if you didn’t continue.”
+“Then, let’s see where this carriage will lead you.”
+“Unfortunately, my job as your guide and conductor ends here.”
+“I hope that this last stop will provide you with some enlightenment of the world.”
+“Farewell, my friend.”
+*Child steps into the last carriage and triggers Ending 2*
+
+If dialogue 2 (Use the same cutscene as Path 1):
+Conductor: “Oh, I see.”
+“Well, although it is unfortunate that you do not wish to continue this journey, it was a pleasure guiding you!”
+“I hope this carriage will be able to offer you what you want.”
+“Farewell.”
+*Cut-scene where conductor leaves and child begins turning into the monster that guards this carriage*
+Dialogue pop-up: The End.
+
+Ending 2:
+Cut-scene dialogue:
+The child opens the door to the last carriage.
+
+To the child’s surprise, there was no carriage behind this door.
+Rather, the child was met with reality.
+
+As the child steps out of the carriage, 
+The train carriage disappears as though it never existed to begin with.
+
+With no destination, the child roamed around the city.
+They soon began to slowly remember what happened in this world.
+
+Soon, they stopped in front of two familiar bodies.
+The child laid down, closing their eyes.
+And ever so gently, said,
+
+“I’m home.”
+
+Hidden Room Ending:
+Cut-scene dialogue:
+The child opens the door to the hidden room.
+
+They are met with a familiar view, a familiar “home.”
+Soon, they can see a familiar figure sitting in the “living room.”
+
+Tears formed from the child’s eyes as they ran towards the figure.
+The child was met with a warm embrace.
+
+The child smiled in content,
+Recounting the adventures they experienced as the figure listened intently. 
+
+“I’ll never leave you again,
+Mom.”
