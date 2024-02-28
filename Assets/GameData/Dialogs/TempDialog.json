@@ -1,0 +1,17 @@
+{
+  "TimeBetweenLetters": 0,
+  "Texts": [
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "name",
+      "text": [
+        "asdf"
+      ],
+      "currentTextPosition": 0
+    }
+  ],
+  "currentIndex": 0
+}
