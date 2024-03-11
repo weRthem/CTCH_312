@@ -1,18 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.IO;
+using System.Collections.Generic;
 
 public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance { get; private set; }
 
-    public UnityEvent<Sprite, string, string[]> StartNewDialogBox;
+    public UnityEvent<Sprite, string> StartNewDialogBox;
     public UnityEvent<string> AppendText;
     public UnityEvent ClearText;
+    public UnityEvent FinishedAddingText;
     public UnityEvent EndDialog;
 
     private Dialog currentDialog = null;
     private float timeSinceLastCharacter = 0f;
+    private Dictionary<string, Sprite> dialogueSprites = new Dictionary<string, Sprite>();
 
     // Start is called before the first frame update
     void Start()
@@ -51,9 +54,16 @@ public class DialogManager : MonoBehaviour
 
         DialogText dialogText = currentDialog.Texts[currentDialog.currentIndex];
 
+        if (dialogText.currentTextPosition >= dialogText.text.Length) return;
+
         AppendText?.Invoke(dialogText.text[dialogText.currentTextPosition]);
 
         dialogText.currentTextPosition++;
+
+        if (dialogText.currentTextPosition >= dialogText.text.Length)
+		{
+            FinishedAddingText?.Invoke();
+		}
     }
 
     public async void LoadDialog(string path)
@@ -74,8 +84,14 @@ public class DialogManager : MonoBehaviour
 
             if (dialogText == null) continue;
 
-            Resources.LoadAsync<Sprite>(dialogText.IconPath).completed += dialogText.AssignSprite;
-		}
+            if (dialogueSprites.ContainsKey(dialogText.IconPath)) continue;
+
+            dialogText.iconLoader = Resources.LoadAsync<Sprite>(dialogText.IconPath);
+
+            dialogText.iconLoader.completed += dialogText.OnIconLoaded;
+
+            dialogueSprites.Add(dialogText.IconPath, null);
+        }
 
         return;
 	}
@@ -94,9 +110,9 @@ public class DialogManager : MonoBehaviour
 
         DialogText dialogText = currentDialog.Texts[currentDialog.currentIndex];
 
-        Sprite dialogSprite = dialogText.Icon;
+        Sprite dialogSprite = dialogueSprites[dialogText.IconPath];
 
-        StartNewDialogBox?.Invoke(dialogSprite, dialogText.characterName, dialogText.text);
+        StartNewDialogBox?.Invoke(dialogSprite, dialogText.characterName);
 	}
 
     public void GetRemainingTextInDialog()
@@ -110,5 +126,12 @@ public class DialogManager : MonoBehaviour
 		}
 
         AppendText?.Invoke(remainingDialog);
+	}
+
+    public void AddSpriteToDialogueSprites(string key, Sprite sprite)
+	{
+        if (!dialogueSprites.ContainsKey(key)) return;
+
+        dialogueSprites[key] = sprite;
 	}
 }

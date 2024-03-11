@@ -12,14 +12,23 @@ public class Dialog
 public class DialogText
 {
 	public string IconPath;
-	public Sprite Icon;
 	public bool isChoice;
 	public string characterName;
 	public string[] text;
 	public int currentTextPosition = 0;
+	public ResourceRequest iconLoader = null;
 
-	public void AssignSprite(AsyncOperation operation)
+	public void OnIconLoaded(AsyncOperation operation)
 	{
+		if(iconLoader == null)
+		{
+			Debug.LogError("No icon loader was provided");
+			return;
+		}
 
+		if (!iconLoader.isDone) return;
+
+		DialogManager.Instance.AddSpriteToDialogueSprites(IconPath, (Sprite)iconLoader.asset);
+		iconLoader = null;
 	}
 }
