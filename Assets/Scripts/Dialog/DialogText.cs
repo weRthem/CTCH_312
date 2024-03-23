@@ -12,7 +12,6 @@ public class Dialog
 public class DialogText
 {
 	public string IconPath;
-	public bool isChoice;
 	public string characterName;
 	public string[] text;
 	public int currentTextPosition = 0;

@@ -1,0 +1,95 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Well done on defeating the entity child!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Who would’ve thought that these entities called Nightmares would show up on the train?"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "As usual, a puzzle was completed and a train ticket was obtained."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Here’s the last choice you can make now that you’ve gotten this far."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Beyond this carriage, lies the last carriage."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "This question is simple."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Do you wish to continue to the next carriage or remain in this one?"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "I want to continue.",
+          "I want to stay here."
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

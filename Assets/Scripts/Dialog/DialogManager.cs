@@ -7,22 +7,23 @@ public class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance { get; private set; }
 
-    public UnityEvent<Sprite, string> StartNewDialogBox;
+    public UnityEvent<Sprite, string, string[]> StartNewDialogBox;
     public UnityEvent<string> AppendText;
-    public UnityEvent ClearText;
     public UnityEvent FinishedAddingText;
     public UnityEvent EndDialog;
+
+    private bool isDialogPlaying = false;
 
     private Dialog currentDialog = null;
     private float timeSinceLastCharacter = 0f;
     private Dictionary<string, Sprite> dialogueSprites = new Dictionary<string, Sprite>();
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Instance = this;
 
-        Directory.CreateDirectory(Application.dataPath + "/GameData/Dialogs/");
+/*        Directory.CreateDirectory(Application.dataPath + "/GameData/Dialogs/");
 
         FileStream fs = File.Create(Application.dataPath + "/GameData/Dialogs/TempDialog.json");
 
@@ -40,13 +41,14 @@ public class DialogManager : MonoBehaviour
 
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(json);
 
-        fs.Write(bytes);
+        fs.Write(bytes);*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentDialog == null) return;
+        if (!isDialogPlaying) return;
+        if (currentDialog == null || currentDialog.Texts[currentDialog.currentIndex].text.Length > 1) return;
 
         timeSinceLastCharacter += Time.deltaTime;
 
@@ -54,16 +56,18 @@ public class DialogManager : MonoBehaviour
 
         DialogText dialogText = currentDialog.Texts[currentDialog.currentIndex];
 
-        if (dialogText.currentTextPosition >= dialogText.text.Length) return;
+        if (dialogText.currentTextPosition >= dialogText.text[0].Length) return;
 
-        AppendText?.Invoke(dialogText.text[dialogText.currentTextPosition]);
+        AppendText?.Invoke(dialogText.text[0][dialogText.currentTextPosition].ToString());
 
         dialogText.currentTextPosition++;
 
-        if (dialogText.currentTextPosition >= dialogText.text.Length)
+        if (dialogText.currentTextPosition >= dialogText.text[0].Length)
 		{
             FinishedAddingText?.Invoke();
 		}
+
+        timeSinceLastCharacter = 0f;
     }
 
     public async void LoadDialog(string path)
@@ -98,34 +102,50 @@ public class DialogManager : MonoBehaviour
 
     public void MoveToNextDialogBox()
 	{
-        ClearText?.Invoke();
-        currentDialog.currentIndex++;
-
-        if(currentDialog.currentIndex >= currentDialog.Texts.Length)
+        if (!isDialogPlaying)
 		{
-            EndDialog?.Invoke();
-            currentDialog = null;
+            isDialogPlaying = true;
+
+            EnableNewDialogBox();
+
             return;
 		}
+
+        currentDialog.currentIndex++;
+
+        EnableNewDialogBox();
+	}
+
+    private void EnableNewDialogBox()
+	{
+        if (currentDialog.currentIndex >= currentDialog.Texts.Length)
+        {
+            EndDialog?.Invoke();
+            currentDialog = null;
+            isDialogPlaying = false;
+            return;
+        }
 
         DialogText dialogText = currentDialog.Texts[currentDialog.currentIndex];
 
         Sprite dialogSprite = dialogueSprites[dialogText.IconPath];
 
-        StartNewDialogBox?.Invoke(dialogSprite, dialogText.characterName);
-	}
+        StartNewDialogBox?.Invoke(dialogSprite, dialogText.characterName, dialogText.text);
+    }
 
     public void GetRemainingTextInDialog()
 	{
         DialogText currentText = currentDialog.Texts[currentDialog.currentIndex];
         string remainingDialog = "";
 
-        for (int i = currentText.currentTextPosition; i < currentText.text.Length; i++)
+        for (int i = currentText.currentTextPosition; i < currentText.text[0].Length; i++)
 		{
-            remainingDialog += currentText.text[i];
+            remainingDialog += currentText.text[0][i];
+            currentText.currentTextPosition = i;
 		}
 
         AppendText?.Invoke(remainingDialog);
+        FinishedAddingText?.Invoke();
 	}
 
     public void AddSpriteToDialogueSprites(string key, Sprite sprite)

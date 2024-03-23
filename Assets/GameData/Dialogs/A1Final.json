@@ -1,0 +1,106 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "You’ve found the missing ticket! Well done."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "I’m sure it wasn’t easy trying to look for the ticket, but here we are- just you, me, and the ticket."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Now…"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "It is time for you to make your first choice."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "There once lived a child who traveled among the stars, going on adventures and spending countless nights gazing at the stars around them."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "In comparison, another child rarely traveled anywhere, staying in the same room and spending their nights gazing at the same sets of lights."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Answer me this child."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Which child are you?"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "A child that travels among the stars.",
+          "A child who remains in the same room."
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

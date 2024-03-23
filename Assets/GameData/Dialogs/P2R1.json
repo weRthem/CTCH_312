@@ -1,0 +1,117 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "What a surprise!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "I’m delighted to hear that you were able to win a game against the Sleepy Card Player!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "They enjoy collecting stuff around this cabin to hand out as rewards if anyone wins a game against them."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "The train ticket must have been one of them!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Since you’ve presented me with this ticket, you will have to make another decision."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "After playing a game of cards, the child began to feel hungry."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "This child was then presented with two options"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The first option was to eat the leftovers from a trash can. The second option was to eat from the dining table."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "What path would you like to set on?"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "I want to eat trash!",
+          "I want to eat from the food house!"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

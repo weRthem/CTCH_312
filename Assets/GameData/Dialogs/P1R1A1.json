@@ -1,0 +1,50 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Interesting choice."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Not many would choose this option but who am I to stop you?"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Enjoy your meal child!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Enjoy your meal child!"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

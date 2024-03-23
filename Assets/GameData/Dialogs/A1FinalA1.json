@@ -1,0 +1,50 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Wonderful!"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "The next carriage shall be ready for you soon."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "Here’s a friendly note from your friendly conductor! The stars that were once connected are now in chaos."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Conductor",
+        "text": [
+          "I hope that your journey down this path is phenomenal!"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

@@ -1,19 +1,68 @@
 {
-  "TimeBetweenLetters": 0,
+  "TimeBetweenLetters": 0.1,
   "Texts": [
     {
       "IconPath": "path",
       "Icon": {
         "instanceID": 0
       },
-      "isChoice": false,
       "characterName": "???",
       "text": [
-        "\"Wa… up…\"",
-        "…",
-        "\"Wake… p\"",
-        "…",
-        "\"Wake up, child.\"",
+        "\"Wa… up…\""
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "",
+      "text": [
+        "…"
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "???",
+      "text": [
+        "\"Wake… p\""
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "",
+      "text": [
+        "…"
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "???",
+      "text": [
+        "\"Wake up, child.\""
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "",
+      "text": [
         "A familiar voice gently calls for the sleeping child, waking them from their long slumber."
       ],
       "currentTextPosition": 0
@@ -23,7 +72,6 @@
         "Icon": {
           "instanceID": 0
         },
-        "isChoice": true,
         "characterName": "???",
         "text": [
           "Who are you?",
@@ -36,15 +84,55 @@
         "Icon": {
           "instanceID": 0
         },
-        "isChoice": true,
         "characterName": "Conductor",
         "text": [
-          "\"I am the conductor of the train you will board soon. Right now, you are about to start your path, your ending.\"",
-          "…?",
-          "\"The path you walk on will change depending on your choices. You’ll come to understand in due time. Look for items and unlock the train ticket to your next station.\"",
-          "\"Now, wake up, child…\""
+          "\"I am the conductor of the train you will board soon. Right now, you are about to start your path, your ending.\""
         ],
         "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "",
+      "text": [
+        "…?"
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "Conductor",
+      "text": [
+        "\"The path you walk on will change depending on your choices. You’ll come to understand in due time."
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "Conductor",
+      "text": [
+        "Look for items and unlock the train ticket to your next station.\""
+      ],
+      "currentTextPosition": 0
+    },
+    {
+      "IconPath": "path",
+      "Icon": {
+        "instanceID": 0
+      },
+      "characterName": "Conductor",
+      "text": [
+        "\"Now, wake up, child…\""
+      ],
+      "currentTextPosition": 0
     }
   ],
   "currentIndex": 0

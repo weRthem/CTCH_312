@@ -1,0 +1,39 @@
+{
+    "TimeBetweenLetters": 0,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Sleepy Card Player",
+        "text": [
+          "To think that my straight flush would be beaten by a child…"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Sleepy Card Player",
+        "text": [
+          "Sad. Quite embarrass’in really."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "Sleepy Card Player",
+        "text": [
+          "Well kid, since you beat me at Poker, here’s a lil’ something for ya travels."
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }
