@@ -67,14 +67,14 @@ Conductor: “Extravagant!”
 
 Path 1:
 Interaction messages/Item descriptions:
-Note 1 (star 3): 
-Note 2 (star 5): 
-Note 3 (star 4): 
-Note 4 (star 1): 
-Note 5 (star 2): 
+Note 1 (star 3): The highest among all stars.
+Note 2 (star 5): This star sits at the bottom.
+Note 3 (star 4): This star does not sit at the top.
+Note 4 (star 1): This star is in the same position as the second star.
+Note 5 (star 2): The second star that sits at the bottom.
 DEVELOPER NOTE: The note hints will either be drawn or written though a png file
 If the player interacts with the hidden compartment: Looks like it can be opened but not through normal means.
-Once the stars are aligned: The stars have aligned! A constellation of a [insert here] has been completed.
+Once the stars are aligned: The stars have aligned! A constellation of a worm has been completed!
 The sound of something opening can be heard.
 When the player obtains the ticket: A train ticket was obtained!
 
@@ -195,7 +195,7 @@ Jack of hearts: The jack of hearts. At least he’s not heartless.
 Card arrangement: (1) Ace of spades, (2) Jack of hearts, (3) Queen of clubs, (4) King of diamonds, (5) 10 of diamonds.
 Player interacting with sleeping NPC: A sleeping player. 
 If the player interacts with sleeping NPC 3 times: Stop bothering someone sleeping. [Player can no longer interact with sleeping NPC after this]
-If the player interacts with Sleepy Card Player after getting the ticket: “Get go’in kid. I’m go’na to sit here and drown in my embarrass’in loss.” [Cannot interact with this NPC after this dialogue]
+If the player interacts with Sleepy Card Player after getting the ticket: “Get go’in kid. I’m go’na sit here and drown in my embarrass’in loss.” [Cannot interact with this NPC after this dialogue]
 
 One table of cards is arranged:
 *Sleepy Card Player wakes up with an exclamation point on top of their head*
