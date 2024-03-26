@@ -1,20 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+
     [SerializeField] float characterSpeed = 10f;
+    [SerializeField] TextMeshProUGUI interactionText = null;
+    [SerializeField] ItemVisual[] itemVisuals;
 
     private Rigidbody2D rb = null;
 
     private Vector2 direction = new Vector2();
+    private Interaction currentlySelectedInteration = null;
+    private Item[] items = new Item[10];
+    private int currentHotBarNumber = 1;
+
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
 
         rb.position = EntranceManager.Instance.GetSpawnPointByIndex(GameManager.Instance.SpawnPointID);
+        UpdateItemVisuals();
     }
 
     // Update is called once per frame
@@ -45,5 +56,131 @@ public class Player : MonoBehaviour
         direction.Normalize();
 
         rb.velocity = direction * characterSpeed * Time.deltaTime;
+
+		if (currentlySelectedInteration && Input.GetKeyDown(KeyCode.E))
+		{
+            currentlySelectedInteration.Interacted?.Invoke();
+		}
+
+		for (int i = 0; i < 10; i++)
+		{
+			if (Input.GetKeyDown((KeyCode)(i + 48)))
+			{
+                // 48 is the enum value for 0 and 57 is the enum value for 9
+                currentHotBarNumber = i;
+                UpdateItemVisuals();
+			}
+		}
     }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if(collision.TryGetComponent(out Interaction interaction))
+		{
+            interactionText.text = interaction.interactText;
+
+            currentlySelectedInteration = interaction;
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+        if (collision.TryGetComponent(out Interaction interaction))
+        {
+            interactionText.text = "";
+
+            currentlySelectedInteration = null;
+        }
+    }
+
+    private void UpdateItemVisuals()
+	{
+        if(itemVisuals.Length != items.Length)
+		{
+            Debug.LogError("item visuals and items aren't the same length");
+            return;
+		}
+
+		for (int i = 0; i < itemVisuals.Length; i++)
+		{
+            if(items[i].itemIcon == null)
+			{
+                itemVisuals[i].icon.color = Color.clear;
+            }
+			else
+			{
+                itemVisuals[i].icon.sprite = items[i].itemIcon;
+                itemVisuals[i].icon.color = Color.white;
+            }
+            
+            if(i == currentHotBarNumber)
+			{
+                Color grey = Color.grey;
+
+                grey.a = 0.5f;
+                itemVisuals[i].background.color = grey;
+			}
+			else
+			{
+                Color black = Color.black;
+
+                black.a = 0.5f;
+                itemVisuals[i].background.color = black;
+            }
+		}
+	}
+
+    public void AddItem(Item item)
+	{
+		for (int i = 1; i < items.Length; i++)
+		{
+            Debug.Log("Checking item: " + i);
+            if(string.IsNullOrEmpty(items[i].itemName))
+			{
+                items[i] = item;
+                UpdateItemVisuals();
+                return;
+			}
+		}
+
+		if (string.IsNullOrEmpty(items[0].itemName))
+		{
+            items[0] = item;
+            UpdateItemVisuals();
+        }
+	}
+
+    public Item GetCurrentlySelectedItem()
+	{
+        if (currentHotBarNumber < 0 || currentHotBarNumber > 9) return new Item();
+
+        return items[currentHotBarNumber];
+	}
+
+    public void RemoveItem(string itemName)
+	{
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].itemName == itemName)
+            {
+                items[i] = new Item();
+                UpdateItemVisuals();
+                return;
+            }
+        }
+    }
+}
+
+[System.Serializable]
+public struct Item
+{
+    public string itemName;
+    public Sprite itemIcon;
+}
+
+[System.Serializable]
+public struct ItemVisual
+{
+    public UnityEngine.UI.Image background;
+    public UnityEngine.UI.Image icon;
 }

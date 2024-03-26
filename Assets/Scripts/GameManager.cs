@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 
-    public int SpawnPointID { get; set; } = -1;
+    public int SpawnPointID { get; set; } = 0;
 
 	private void Awake()
 	{
