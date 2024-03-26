@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private Interaction currentlySelectedInteration = null;
     private Item[] items = new Item[10];
     private int currentHotBarNumber = 1;
+    private float velX;
+    private float velY;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +38,8 @@ public class Player : MonoBehaviour
         float inputY = Input.GetAxis("Vertical");
 
         // Get the direction of the inputs and bind it to either -1 or 1
-        float velX = Mathf.Sign(inputX);
-        float velY = Mathf.Sign(inputY);
+        velX = Mathf.Sign(inputX);
+        velY = Mathf.Sign(inputY);
 
         // If the inputs are near 0 set the velocity of that direction to 0 since Mathf.Sign only returns -1 or 1 no 0
         if(inputX > -Mathf.Epsilon && inputX < Mathf.Epsilon)
@@ -49,13 +51,6 @@ public class Player : MonoBehaviour
         {
             velY = 0;
         }
-
-        direction.Set(velX, velY);
-
-        // Sets the magnitude of the direction that the character is moving to be 1 to keep them from moving faster on an angle
-        direction.Normalize();
-
-        rb.velocity = direction * characterSpeed * Time.deltaTime;
 
 		if (currentlySelectedInteration && Input.GetKeyDown(KeyCode.E))
 		{
@@ -71,6 +66,16 @@ public class Player : MonoBehaviour
                 UpdateItemVisuals();
 			}
 		}
+    }
+
+	private void FixedUpdate()
+	{
+        direction.Set(velX, velY);
+
+        // Sets the magnitude of the direction that the character is moving to be 1 to keep them from moving faster on an angle
+        direction.Normalize();
+
+        rb.velocity = (direction * characterSpeed) * Time.fixedDeltaTime;
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)

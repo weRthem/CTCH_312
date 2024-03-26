@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 	public static GameManager Instance { get; private set; }
 
     public int SpawnPointID { get; set; } = 0;
+	private int lastSceneIndex = 0;
 
 	private void Awake()
 	{
@@ -22,5 +24,14 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	public void LoadScene(int sceneIndex)
+	{
+		lastSceneIndex = SceneManager.GetActiveScene().buildIndex;
+		SceneManager.LoadScene(sceneIndex);
+	}
 
+	public void LoadLastScene()
+	{
+		SceneManager.LoadScene(lastSceneIndex);
+	}
 }

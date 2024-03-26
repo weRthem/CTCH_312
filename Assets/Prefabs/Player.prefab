@@ -130,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: -1714783012, guid: 9ed5cef600ddd024fb371ba93c504925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,4 +210,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65abe5ea940e6604393ead4a3bd395ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterSpeed: 2500
+  characterSpeed: 3000
+  interactionText: {fileID: 0}
+  itemVisuals:
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}
+  - background: {fileID: 0}
+    icon: {fileID: 0}

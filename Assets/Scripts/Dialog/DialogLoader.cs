@@ -1,39 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
 using System.IO;
 
 public class DialogLoader : MonoBehaviour
 {
-
     [SerializeField] string dialogName = "";
     [SerializeField] bool playDialogOnStart = false;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Button nextDialogBtn;
     [SerializeField] Button[] buttons;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] UnityEvent OnNewDialogueStarted;
+    [SerializeField] UnityEvent OnDialogueEnded;
 
     private const string defaultFolder = "GameData/Dialogs";
 
-    private bool isFinishedDialogBox = false;
     private DialogManager dialogManager;
+    private bool isDialogueFinished = false;
 
     // Start is called before the first frame update
     void Start()
     {
         dialogManager = DialogManager.Instance;
+        
+        if (!playDialogOnStart) return;
 
+        StartNewDialog();
+    }
+
+    public void StartNewDialog()
+	{
         dialogManager.StartNewDialogBox.AddListener(StartNewDialogBox);
         dialogManager.AppendText.AddListener(AppendText);
         dialogManager.FinishedAddingText.AddListener(FinishedDialogBox);
         dialogManager.EndDialog.AddListener(EndDialog);
-        
+
         LoadDialog();
 
-        if (!playDialogOnStart) return;
-
-        Invoke("StartDialog", 0.02f);
+        Invoke("StartDialog", 0.04f);
     }
 
     private void StartDialog()
@@ -41,34 +49,24 @@ public class DialogLoader : MonoBehaviour
         dialogManager.MoveToNextDialogBox();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			if (isFinishedDialogBox)
-			{
-                DialogManager.Instance.MoveToNextDialogBox();
-			}
-			else
-			{
-                DialogManager.Instance.GetRemainingTextInDialog();
-			}
-		}
-    }
-
     public void LoadDialog()
 	{
         string path = Path.Combine(Application.dataPath, defaultFolder, dialogName + ".json");
 
         DialogManager.Instance.LoadDialog(path);
+        OnNewDialogueStarted?.Invoke();
     }
 
     private void StartNewDialogBox(Sprite sprite, string characterName, string[] dialogs)
 	{
-        isFinishedDialogBox = false;
+        isDialogueFinished = false;
         nextDialogBtn.gameObject.SetActive(false);
         text.text = "";
+
+        if(nameText != null)
+		{
+            nameText.text = characterName;
+		}
 
         if(dialogs.Length > 1)
 		{
@@ -88,13 +86,13 @@ public class DialogLoader : MonoBehaviour
 
     private void FinishedDialogBox()
 	{
-        isFinishedDialogBox = true;
+        isDialogueFinished = true;
         nextDialogBtn.gameObject.SetActive(true);
     }
 
     private void AppendText(string text)
 	{
-        if (isFinishedDialogBox) return;
+        if (isDialogueFinished) return;
         this.text.text += text;
 	}
 
@@ -105,9 +103,12 @@ public class DialogLoader : MonoBehaviour
 
         text.gameObject.SetActive(false);
         nextDialogBtn.gameObject.SetActive(false);
+        Deregister();
+
+        OnDialogueEnded?.Invoke();
     }
 
-	private void OnDestroy()
+    public void Deregister()
 	{
         dialogManager.StartNewDialogBox.RemoveListener(StartNewDialogBox);
         dialogManager.FinishedAddingText.RemoveListener(FinishedDialogBox);

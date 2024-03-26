@@ -1,5 +1,5 @@
 {
-    "TimeBetweenLetters": 0,
+    "TimeBetweenLetters": 0.1,
     "Texts": [
       {
         "IconPath": "path",

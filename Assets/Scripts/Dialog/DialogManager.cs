@@ -17,6 +17,7 @@ public class DialogManager : MonoBehaviour
     private Dialog currentDialog = null;
     private float timeSinceLastCharacter = 0f;
     private Dictionary<string, Sprite> dialogueSprites = new Dictionary<string, Sprite>();
+    private bool isFinishedDialogue = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -47,8 +48,22 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentDialog == null) return;
+
+        if (Input.GetKeyDown(KeyCode.Space) && currentDialog.Texts[currentDialog.currentIndex].text.Length == 1)
+        {
+            if (isFinishedDialogue)
+            {
+                MoveToNextDialogBox();
+            }
+            else
+            {
+                GetRemainingTextInDialog();
+            }
+        }
+
         if (!isDialogPlaying) return;
-        if (currentDialog == null || currentDialog.Texts[currentDialog.currentIndex].text.Length > 1) return;
+        if (currentDialog.Texts[currentDialog.currentIndex].text.Length > 1) return;
 
         timeSinceLastCharacter += Time.deltaTime;
 
@@ -64,6 +79,7 @@ public class DialogManager : MonoBehaviour
 
         if (dialogText.currentTextPosition >= dialogText.text[0].Length)
 		{
+            isFinishedDialogue = true;
             FinishedAddingText?.Invoke();
 		}
 
@@ -102,6 +118,9 @@ public class DialogManager : MonoBehaviour
 
     public void MoveToNextDialogBox()
 	{
+        if (currentDialog == null) return;
+        isFinishedDialogue = false;
+
         if (!isDialogPlaying)
 		{
             isDialogPlaying = true;
@@ -118,6 +137,8 @@ public class DialogManager : MonoBehaviour
 
     private void EnableNewDialogBox()
 	{
+        if (currentDialog == null) return;
+
         if (currentDialog.currentIndex >= currentDialog.Texts.Length)
         {
             EndDialog?.Invoke();
@@ -145,6 +166,7 @@ public class DialogManager : MonoBehaviour
 		}
 
         AppendText?.Invoke(remainingDialog);
+        isFinishedDialogue = true;
         FinishedAddingText?.Invoke();
 	}
 
