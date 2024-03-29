@@ -13,6 +13,8 @@ public class DialogLoader : MonoBehaviour
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Button nextDialogBtn;
     [SerializeField] Button[] buttons;
+    [SerializeField] Sprite buttonsBackground;
+    [SerializeField] Image dialogBackground;
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] UnityEvent OnNewDialogueStarted;
     [SerializeField] UnityEvent OnDialogueEnded;
@@ -70,6 +72,10 @@ public class DialogLoader : MonoBehaviour
 
         if(dialogs.Length > 1)
 		{
+			if (dialogBackground)
+			{
+                dialogBackground.sprite = buttonsBackground;
+			}
             text.gameObject.SetActive(false);
             buttons[0].GetComponentInChildren<TextMeshProUGUI>().text = dialogs[0];
             buttons[1].GetComponentInChildren<TextMeshProUGUI>().text = dialogs[1];
