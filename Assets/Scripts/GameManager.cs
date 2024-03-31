@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }
 
     public int SpawnPointID { get; set; } = 0;
+	public Item[] items = new Item[10];
+	public Sprite Background;
+	public string endingText;
 	private int lastSceneIndex = 0;
 
 	private void Awake()

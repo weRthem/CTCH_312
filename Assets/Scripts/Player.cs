@@ -27,6 +27,12 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         rb.position = EntranceManager.Instance.GetSpawnPointByIndex(GameManager.Instance.SpawnPointID);
+
+        for (int i = 0; i < GameManager.Instance.items.Length; i++)
+        {
+            items[i] = GameManager.Instance.items[i];
+        }
+
         UpdateItemVisuals();
     }
 
@@ -172,6 +178,14 @@ public class Player : MonoBehaviour
                 UpdateItemVisuals();
                 return;
             }
+        }
+    }
+
+    public void SendItemsToGameManager()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            GameManager.Instance.items[i] = items[i];
         }
     }
 }

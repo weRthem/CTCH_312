@@ -43,7 +43,7 @@ public class DialogLoader : MonoBehaviour
 
         LoadDialog();
 
-        Invoke("StartDialog", 0.04f);
+        Invoke("StartDialog", 0.1f);
     }
 
     private void StartDialog()
