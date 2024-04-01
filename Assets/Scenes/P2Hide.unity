@@ -196,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b3d3ce0e4ce1263419019ec2d28faf0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -677,7 +677,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e7d8ed47069341d48ba9c0572d359262, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 1
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: f3620fbe2b609cc45bf3c471e1d96bff, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -1252,7 +1252,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: f3620fbe2b609cc45bf3c471e1d96bff,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -2444,7 +2444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 2
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: cfcdec7e718d3f648b8bea8c53f689d2, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -2508,7 +2508,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: cfcdec7e718d3f648b8bea8c53f689d2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -4332,7 +4332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 3
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: f2d1191ddcc1e1942ada083fca307375, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -4396,7 +4396,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: f2d1191ddcc1e1942ada083fca307375,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -4526,7 +4526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e733209fb6366a649b06e59407df2176, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4704,7 +4704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 5
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: 3f613144f3e37944a8153b5310f21240, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -4768,7 +4768,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: 3f613144f3e37944a8153b5310f21240,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -4978,7 +4978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 4
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: f212b29da2c2375418bed70a4cff42e9, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -5042,7 +5042,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: f212b29da2c2375418bed70a4cff42e9,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -5329,7 +5329,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a,
+          m_ObjectArgument: {fileID: 21300000, guid: ad03f6e80fe23414ba1341f8447ca41f,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
@@ -5401,7 +5401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemName: 0
-    itemIcon: {fileID: 21300000, guid: 0798349fe05504a4abe4c84e79a98f8a, type: 3}
+    itemIcon: {fileID: 21300000, guid: ad03f6e80fe23414ba1341f8447ca41f, type: 3}
   OnCorrectItemUsed:
     m_PersistentCalls:
       m_Calls: []
@@ -5690,6 +5690,55 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1287019740}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: WindowOpen
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 544464442}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: fa098e0c0f28e874a9cc62609b809b5c,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 838836566}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Its a Ticket
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 52349289}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ticket
           m_BoolArgument: 0
         m_CallState: 2
   OnPuzzleClosed:
@@ -7066,6 +7115,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930810211463739304, guid: 6bfa2a1043816124cbb078692ab79302,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bfa2a1043816124cbb078692ab79302, type: 3}
