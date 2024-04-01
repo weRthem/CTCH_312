@@ -904,6 +904,8 @@ MonoBehaviour:
   buttons:
   - {fileID: 1023350623}
   - {fileID: 1418419952}
+  buttonsBackground: {fileID: 0}
+  dialogBackground: {fileID: 0}
   nameText: {fileID: 0}
   OnNewDialogueStarted:
     m_PersistentCalls:
@@ -1683,7 +1685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e209f69c6ced52a4a8b2e8ae3fa94c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 1
+  sceneToLoad: 2
 --- !u!1 &1742342186
 GameObject:
   m_ObjectHideFlags: 0

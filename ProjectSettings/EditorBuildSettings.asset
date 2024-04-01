@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 0243c55ac6b3f104caf53f6cb414c459
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 2d2c4c4d5377bd0478d0f2ee6c330334
   - enabled: 1
@@ -19,14 +22,11 @@ EditorBuildSettings:
     guid: 39146962739805f46a4dde155422de7f
   - enabled: 1
     path: Assets/Scenes/P2Poker.unity
-    guid: a7b2bcd05de5fca42a9ccf86601b8684
-  - enabled: 1
-    path: Assets/Scenes/P2Hide.unity
-    guid: af8af61c0f2bb11439abae4f90a06cd6
+    guid: 10190ec6ca23a524793f9a9899553b08
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: a1bc4cbc5f372924bb9eb9a51cea006e
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/P2Hide.unity
+    guid: abe0ee01251f021458dd0fbd08e78c95
   m_configObjects: {}
