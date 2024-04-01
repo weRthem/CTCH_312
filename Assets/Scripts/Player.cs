@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI interactionText = null;
     [SerializeField] ItemVisual[] itemVisuals;
 
+    public bool Paused { get; private set; } = false;
+
     private Rigidbody2D rb = null;
 
     private Vector2 direction = new Vector2();
@@ -76,6 +78,8 @@ public class Player : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+        if (Paused) return;
+
         direction.Set(velX, velY);
 
         // Sets the magnitude of the direction that the character is moving to be 1 to keep them from moving faster on an angle
@@ -188,6 +192,16 @@ public class Player : MonoBehaviour
             GameManager.Instance.items[i] = items[i];
         }
     }
+
+    public void SetPaused(bool isPaused)
+	{
+        Paused = isPaused;
+	}
+
+    public Item[] GetItems()
+	{
+        return items;
+	}
 }
 
 [System.Serializable]
