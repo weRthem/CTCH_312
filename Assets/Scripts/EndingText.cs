@@ -7,13 +7,13 @@ using TMPro;
 public class EndingText : MonoBehaviour
 {
     [SerializeField] Image background;
+    [SerializeField] DialogLoader dialogLoader;
+    [SerializeField] GameObject btns;
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<TextMeshProUGUI>().text = GameManager.Instance.endingText;
-
-        if(GameManager.Instance.Background != null)
+        if (GameManager.Instance.Background != null)
         {
             background.sprite = GameManager.Instance.Background;
         }
@@ -21,6 +21,19 @@ public class EndingText : MonoBehaviour
         {
             background.gameObject.SetActive(false);
         }
+
+        if (!string.IsNullOrEmpty(GameManager.Instance.endingDialogue))
+		{
+            dialogLoader.ChangeDialoguePath(GameManager.Instance.endingDialogue);
+            dialogLoader.StartNewDialog();
+
+            return;
+		}
+
+
+        btns.SetActive(true);
+        GetComponent<TextMeshProUGUI>().text = GameManager.Instance.endingText;
+
     }
 
     public void LoadLastLevel()

@@ -1,0 +1,105 @@
+{
+    "TimeBetweenLetters": 0.1,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child opens the door to the hidden room."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "They are met with a familiar view, a familiar “home.”"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Soon, they can see a familiar figure sitting in the “living room.”"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Tears formed from the child’s eyes as they ran towards the figure."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child was met with a warm embrace."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child smiled in content,"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Recounting the adventures they experienced as the figure listened intently. "
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "“I’ll never leave you again,"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Mom.”"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

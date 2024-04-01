@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 	public Item[] items = new Item[10];
 	public Sprite Background;
 	public string endingText;
+	public string endingDialogue;
 	public float volume = 0.5f;
 	private int lastSceneIndex = 0;
 

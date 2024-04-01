@@ -4491,7 +4491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endingSprite: {fileID: 0}
-  endingText: "\u201CAn adventure awaits!\u201D"
+  endingText: 
+  endingDialogue: Ending1
 --- !u!1 &1310912856
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +4736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endingSprite: {fileID: 0}
   endingText: You died
+  endingDialogue: 
 --- !u!1 &1443614028
 GameObject:
   m_ObjectHideFlags: 0

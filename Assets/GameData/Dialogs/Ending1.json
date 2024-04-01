@@ -1,0 +1,105 @@
+{
+    "TimeBetweenLetters": 0.1,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child opens the door to the last train carriage of their journey."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Similar to the story that the conductor told the child before,"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "They were met with the sight of stars."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "There are a million possibilities awaiting the child."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Many worlds waiting to be explored."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child puts on a cape and helmet from this world,"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Then turns to obtain a sword and shield in hand."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Smiling, the child begins their new journey in the stars."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "“An adventure awaits!”"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

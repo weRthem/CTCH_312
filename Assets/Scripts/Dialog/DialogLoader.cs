@@ -36,6 +36,11 @@ public class DialogLoader : MonoBehaviour
 
     public void StartNewDialog()
 	{
+		if (!dialogManager)
+		{
+            dialogManager = DialogManager.Instance;
+		}
+
         dialogManager.StartNewDialogBox.AddListener(StartNewDialogBox);
         dialogManager.AppendText.AddListener(AppendText);
         dialogManager.FinishedAddingText.AddListener(FinishedDialogBox);
@@ -121,4 +126,9 @@ public class DialogLoader : MonoBehaviour
         dialogManager.AppendText.RemoveListener(AppendText);
         dialogManager.EndDialog.RemoveListener(EndDialog);
     }
+
+    public void ChangeDialoguePath(string newPath)
+	{
+        dialogName = newPath;
+	}
 }

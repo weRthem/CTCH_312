@@ -1,0 +1,127 @@
+{
+    "TimeBetweenLetters": 0.1,
+    "Texts": [
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child opens the door to the last carriage."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "To the child’s surprise, there was no carriage behind this door."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Rather, the child was met with reality."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "As the child steps out of the carriage, "
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The train carriage disappears as though it never existed to begin with."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "With no destination, the child roamed around the city."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "They soon began to slowly remember what happened in this world."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "Soon, they stopped in front of two familiar bodies."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "The child laid down, closing their eyes."
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "And ever so gently, said,"
+        ],
+        "currentTextPosition": 0
+      },
+      {
+        "IconPath": "path",
+        "Icon": {
+          "instanceID": 0
+        },
+        "characterName": "",
+        "text": [
+          "“I’m home.”"
+        ],
+        "currentTextPosition": 0
+      }
+    ],
+    "currentIndex": 0
+  }

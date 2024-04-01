@@ -36,7 +36,10 @@ public class Player : MonoBehaviour
             items[i] = GameManager.Instance.items[i];
         }
 
+        RemoveItem("Ticket");
+
         UpdateItemVisuals();
+
     }
 
     // Update is called once per frame
