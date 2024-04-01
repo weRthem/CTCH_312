@@ -4527,7 +4527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3abeb2153fd57349afd8fd7fb49a205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endingSprite: {fileID: 0}
+  endingSprite: {fileID: 21300000, guid: 0cbff07163eb5fe4886ebb28cc788209, type: 3}
   endingText: 
   endingDialogue: Ending2
 --- !u!1 &1310912856
