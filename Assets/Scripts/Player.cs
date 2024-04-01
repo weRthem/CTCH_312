@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float characterSpeed = 10f;
     [SerializeField] TextMeshProUGUI interactionText = null;
     [SerializeField] ItemVisual[] itemVisuals;
+    [SerializeField] SpriteRenderer bodyRenderer = null;
 
     public bool Paused { get; private set; } = false;
 
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
         velX = Mathf.Sign(inputX);
         velY = Mathf.Sign(inputY);
 
+
         // If the inputs are near 0 set the velocity of that direction to 0 since Mathf.Sign only returns -1 or 1 no 0
         if(inputX > -Mathf.Epsilon && inputX < Mathf.Epsilon)
 		{
@@ -58,6 +60,25 @@ public class Player : MonoBehaviour
         if (inputY > -Mathf.Epsilon && inputY < Mathf.Epsilon)
         {
             velY = 0;
+        }
+
+        if (velY == 0f && velX == 0f)
+        {
+            GetComponent<Animator>().Play("Idle");
+        }
+        else if (velX < 0)
+		{
+            GetComponent<Animator>().Play("Walk");
+            bodyRenderer.flipX = false;
+        }
+		else if(velX > 0)
+		{
+            GetComponent<Animator>().Play("Walk");
+            bodyRenderer.flipX = true;
+        }
+		else
+		{
+            GetComponent<Animator>().Play("Walk");
         }
 
 		if (currentlySelectedInteration && Input.GetKeyDown(KeyCode.E))
