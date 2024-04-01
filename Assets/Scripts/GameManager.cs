@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
 	public void LoadLastScene()
 	{
+		Background = null;
+		endingText = ""; 
 		SceneManager.LoadScene(lastSceneIndex);
 	}
 }
