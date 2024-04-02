@@ -142,4 +142,9 @@ public class DialogLoader : MonoBehaviour
 	{
         dialogName = newPath;
 	}
+
+	private void OnDisable()
+	{
+        Deregister();
+	}
 }

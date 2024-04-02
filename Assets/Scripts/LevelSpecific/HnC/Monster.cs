@@ -55,6 +55,8 @@ public class Monster : MonoBehaviour
                 if (!spottedPlayer) return;
 
                 GameManager.Instance.endingText = "The entity spotted you. Hide next time";
+                GameManager.Instance.Background = null;
+                GameManager.Instance.endingDialogue = "";
                 GameManager.Instance.LoadScene(6);
 			}
 
