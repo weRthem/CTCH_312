@@ -27,7 +27,7 @@ public class DialogText
 
 		if (!iconLoader.isDone) return;
 
-		DialogManager.Instance.AddSpriteToDialogueSprites(IconPath, (Sprite)iconLoader.asset);
+		DialogManager.Instance.AddSpriteToDialogueSprites(IconPath, (Texture2D)iconLoader.asset);
 		iconLoader = null;
 	}
 }

@@ -2,7 +2,7 @@
     "TimeBetweenLetters": 0.1,
     "Texts": [
       {
-        "IconPath": "path",
+        "IconPath": "Conductor.png",
         "Icon": {
           "instanceID": 0
         },
@@ -13,7 +13,7 @@
         "currentTextPosition": 0
       },
       {
-        "IconPath": "path",
+        "IconPath": "Conductor.png",
         "Icon": {
           "instanceID": 0
         },
@@ -24,7 +24,7 @@
         "currentTextPosition": 0
       },
       {
-        "IconPath": "path",
+        "IconPath": "Conductor.png",
         "Icon": {
           "instanceID": 0
         },
@@ -35,7 +35,7 @@
         "currentTextPosition": 0
       },
       {
-        "IconPath": "path",
+        "IconPath": "Conductor.png",
         "Icon": {
           "instanceID": 0
         },
@@ -46,7 +46,7 @@
         "currentTextPosition": 0
       },
       {
-        "IconPath": "path",
+        "IconPath": "Conductor.png",
         "Icon": {
           "instanceID": 0
         },
@@ -57,7 +57,7 @@
         "currentTextPosition": 0
       },
       {
-        "IconPath": "path",
+        "IconPath": "",
         "Icon": {
           "instanceID": 0
         },

@@ -9,6 +9,7 @@ using System.IO;
 public class DialogLoader : MonoBehaviour
 {
     [SerializeField] string dialogName = "";
+    [SerializeField] Image dialogueIcon = null;
     [SerializeField] bool playDialogOnStart = false;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Button nextDialogBtn;
@@ -60,12 +61,22 @@ public class DialogLoader : MonoBehaviour
 	{
         string path = Path.Combine(Application.dataPath, defaultFolder, dialogName + ".json");
 
-        DialogManager.Instance.LoadDialog(path);
+        DialogManager.Instance.LoadDialog(path, Path.Combine(Application.dataPath, defaultFolder));
         OnNewDialogueStarted?.Invoke();
     }
 
     private void StartNewDialogBox(Sprite sprite, string characterName, string[] dialogs)
 	{
+        if(dialogueIcon != null)
+		{
+            dialogueIcon.gameObject.SetActive(true);
+            dialogueIcon.sprite = sprite;
+		}
+		else
+		{
+            dialogueIcon.gameObject.SetActive(false);
+		}
+
         isDialogueFinished = false;
         nextDialogBtn.gameObject.SetActive(false);
         text.text = "";

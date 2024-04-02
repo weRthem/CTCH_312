@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogName: A1Intro
+  dialogueIcon: {fileID: 4043843454851606438}
   playDialogOnStart: 1
   text: {fileID: 4043843455022208695}
   nextDialogBtn: {fileID: 4043843453315513974}
@@ -861,6 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogName: A1FinalA2
+  dialogueIcon: {fileID: 4043843454851606438}
   playDialogOnStart: 0
   text: {fileID: 4043843455022208695}
   nextDialogBtn: {fileID: 4043843453315513974}
@@ -1373,6 +1375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogName: A1FinalA1
+  dialogueIcon: {fileID: 4043843454851606438}
   playDialogOnStart: 0
   text: {fileID: 4043843455022208695}
   nextDialogBtn: {fileID: 4043843453315513974}
@@ -2317,6 +2320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogName: A1Final
+  dialogueIcon: {fileID: 4043843454851606438}
   playDialogOnStart: 0
   text: {fileID: 4043843455022208695}
   nextDialogBtn: {fileID: 4043843453315513974}

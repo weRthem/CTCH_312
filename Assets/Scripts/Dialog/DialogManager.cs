@@ -86,7 +86,7 @@ public class DialogManager : MonoBehaviour
         timeSinceLastCharacter = 0f;
     }
 
-    public async void LoadDialog(string path)
+    public async void LoadDialog(string path, string folderPath)
 	{
         if (!File.Exists(path))
 		{
@@ -102,15 +102,22 @@ public class DialogManager : MonoBehaviour
 		{
             DialogText dialogText = currentDialog.Texts[i];
 
-            if (dialogText == null) continue;
+            if (dialogText == null || string.IsNullOrEmpty(dialogText.IconPath)) continue;
+
+            if (!File.Exists(folderPath + "/" + dialogText.IconPath)) continue;
 
             if (dialogueSprites.ContainsKey(dialogText.IconPath)) continue;
 
-            dialogText.iconLoader = Resources.LoadAsync<Sprite>(dialogText.IconPath);
+            var rawData = File.ReadAllBytes(folderPath + "/" + dialogText.IconPath);
 
-            dialogText.iconLoader.completed += dialogText.OnIconLoaded;
+            Texture2D tex = new Texture2D(1,1);
+            tex.LoadImage(rawData);
+            tex.Apply();
 
-            dialogueSprites.Add(dialogText.IconPath, null);
+            Sprite sprite = Sprite.Create(tex, new Rect(Vector2.zero, new Vector2(210f, 210f)), new Vector2(1f, 1f), 100f);
+
+
+            dialogueSprites.Add(dialogText.IconPath, sprite);
         }
 
         return;
@@ -170,10 +177,17 @@ public class DialogManager : MonoBehaviour
         FinishedAddingText?.Invoke();
 	}
 
-    public void AddSpriteToDialogueSprites(string key, Sprite sprite)
+    public void AddSpriteToDialogueSprites(string key, Texture2D tex)
 	{
+        if (tex == null) return;
+
         if (!dialogueSprites.ContainsKey(key)) return;
 
-        dialogueSprites[key] = sprite;
+        tex.alphaIsTransparency = true;
+        tex.Apply();
+
+
+
+        //dialogueSprites[key] = sprite;
 	}
 }
