@@ -46,4 +46,9 @@ public class GameManager : MonoBehaviour
 		endingText = ""; 
 		SceneManager.LoadScene(lastSceneIndex);
 	}
+
+	public void ClearInventory()
+	{
+		items = new Item[10];
+	}
 }

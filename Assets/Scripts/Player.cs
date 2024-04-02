@@ -102,7 +102,12 @@ public class Player : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-        if (Paused) return;
+        if (Paused)
+		{
+            rb.velocity = Vector2.zero;
+
+            return;
+		}
 
         direction.Set(velX, velY);
 

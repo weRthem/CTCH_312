@@ -28,6 +28,7 @@ public class PuzzlePiece : MonoBehaviour
 		if (Input.GetMouseButtonDown(0) && IsPointerOverThisUIElement())
 		{
             isFollowingMouse = true;
+            transform.rotation = Quaternion.identity;
 		}
 
         if (!isFollowingMouse) return;

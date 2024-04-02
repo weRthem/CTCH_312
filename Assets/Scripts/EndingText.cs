@@ -43,6 +43,7 @@ public class EndingText : MonoBehaviour
 
     public void Restart()
 	{
+        GameManager.Instance.ClearInventory();
         GameManager.Instance.LoadScene(0);
 	}
 
