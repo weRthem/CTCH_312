@@ -114,7 +114,7 @@ public class DialogManager : MonoBehaviour
             tex.LoadImage(rawData);
             tex.Apply();
 
-            Sprite sprite = Sprite.Create(tex, new Rect(Vector2.zero, new Vector2(210f, 210f)), new Vector2(1f, 1f), 100f);
+            Sprite sprite = Sprite.Create(tex, new Rect(Vector2.zero, new Vector2(tex.width, tex.height)), new Vector2(1f, 1f), 100f);
 
 
             dialogueSprites.Add(dialogText.IconPath, sprite);

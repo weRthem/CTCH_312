@@ -33,15 +33,17 @@ public class Monster : MonoBehaviour
 
 		if (attacking)
 		{
+            Vector2 targetPos = targetPosition;
 			if (playerSpriteRenderer.enabled)
 			{
                 spottedPlayer = true;
+                targetPos = playerSpriteRenderer.GetComponentInParent<Player>().transform.position;
 			}
 
             lerpProgress += Time.deltaTime * speed;
 
             lerpProgress = Mathf.Clamp01(lerpProgress);
-            Vector2 pos1 = Vector2.Lerp(startPos, targetPosition, lerpProgress);
+            Vector2 pos1 = Vector2.Lerp(startPos, targetPos, lerpProgress);
 
             transform.position = pos1;
 
@@ -53,7 +55,7 @@ public class Monster : MonoBehaviour
                 if (!spottedPlayer) return;
 
                 GameManager.Instance.endingText = "The entity spotted you. Hide next time";
-                SceneManager.LoadScene(6);
+                GameManager.Instance.LoadScene(6);
 			}
 
             return;
