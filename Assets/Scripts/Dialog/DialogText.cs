@@ -16,18 +16,4 @@ public class DialogText
 	public string[] text;
 	public int currentTextPosition = 0;
 	public ResourceRequest iconLoader = null;
-
-	public void OnIconLoaded(AsyncOperation operation)
-	{
-		if(iconLoader == null)
-		{
-			Debug.LogError("No icon loader was provided");
-			return;
-		}
-
-		if (!iconLoader.isDone) return;
-
-		DialogManager.Instance.AddSpriteToDialogueSprites(IconPath, (Texture2D)iconLoader.asset);
-		iconLoader = null;
-	}
 }

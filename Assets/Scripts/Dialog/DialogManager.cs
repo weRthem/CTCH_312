@@ -156,7 +156,12 @@ public class DialogManager : MonoBehaviour
 
         DialogText dialogText = currentDialog.Texts[currentDialog.currentIndex];
 
-        Sprite dialogSprite = dialogueSprites[dialogText.IconPath];
+        Sprite dialogSprite = null; 
+
+		if (dialogueSprites.ContainsKey(dialogText.IconPath))
+		{
+            dialogSprite = dialogueSprites[dialogText.IconPath];
+        }
 
         StartNewDialogBox?.Invoke(dialogSprite, dialogText.characterName, dialogText.text);
     }
@@ -177,17 +182,4 @@ public class DialogManager : MonoBehaviour
         FinishedAddingText?.Invoke();
 	}
 
-    public void AddSpriteToDialogueSprites(string key, Texture2D tex)
-	{
-        if (tex == null) return;
-
-        if (!dialogueSprites.ContainsKey(key)) return;
-
-        tex.alphaIsTransparency = true;
-        tex.Apply();
-
-
-
-        //dialogueSprites[key] = sprite;
-	}
 }

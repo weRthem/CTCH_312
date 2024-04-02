@@ -67,12 +67,12 @@ public class DialogLoader : MonoBehaviour
 
     private void StartNewDialogBox(Sprite sprite, string characterName, string[] dialogs)
 	{
-        if(dialogueIcon != null)
+        if(sprite != null && dialogueIcon != null)
 		{
             dialogueIcon.gameObject.SetActive(true);
             dialogueIcon.sprite = sprite;
 		}
-		else
+		else if(dialogueIcon != null)
 		{
             dialogueIcon.gameObject.SetActive(false);
 		}
